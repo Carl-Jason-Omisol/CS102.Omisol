@@ -4,7 +4,7 @@ install.packages("rvest")
 library(rvest)
 library(polite)
 
-url <- "https://www.amazon.com/s?k=lanyard&i=office-electronics&crid=18MV1MXK3JOVM&sprefix=lanya%2Coffice-electronics%2C533&ref=nb_sb_noss_2"
+url <- "https://www.amazon.com/s?i=garden&srs=21217035011&bbn=21217035011&dc&qid=1707490178&ref=lp_specialty-aps_nr_i_2"
 
 session <- bow(url, user_agent = "Educational")
 session
@@ -54,10 +54,10 @@ product_df2 <- data.frame(Brand_Description = brand_descriptions,
 
 write.csv(product_df2, "SecondItem.csv")
 
-product_df2$Category <- "Lanyard"
+product_df2$Category <- "Lighting"
 
 product_df2 <- product_df2[, c("Category", names(product_df2)[-which(names(product_df2) == "Category")])]
 
-write.csv(product_df2, "Seccond_product.csv", row.names = FALSE)
+write.csv(product_df2, "Second_product.csv", row.names = FALSE)
 
 View(Product2)

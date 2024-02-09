@@ -4,7 +4,7 @@ install.packages("rvest")
 library(rvest)
 library(polite)
 
-url <- "https://www.amazon.com/s?k=wallet&i=office-electronics&crid=150RL6D9LN1BV&sprefix=wall%2Coffice-electronics%2C738&ref=nb_sb_noss_2"
+url <- "https://www.amazon.com/s?i=fashion-mens-intl-ship&bbn=16225019011&rh=n%3A7141123011%2Cn%3A16225019011%2Cn%3A7147441011%2Cn%3A1040658%2Cn%3A1045560&dc&ds=v1%3AElocxdOTcgPvyqUcczcF4Wx0Gy3bEJ19lREM0yrLZNc&qid=1707490821&rnid=7141123011&ref=sr_nr_n_8"
 
 session <- bow(url, user_agent = "Educational")
 session
@@ -54,7 +54,7 @@ product_df3 <- data.frame(Brand_Description = brand_descriptions,
 
 write.csv(product_df3, "ThirdItem.csv")
 
-product_df3$Category <- "Wallet"
+product_df3$Category <- "Shorts"
 
 product_df3 <- product_df3[, c("Category", names(product_df3)[-which(names(product_df3) == "Category")])]
 
