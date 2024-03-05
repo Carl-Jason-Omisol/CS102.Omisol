@@ -32,8 +32,8 @@ line-from-txt <-c(
   "fem.;64;62.8",
 )
 
-identify_comments<-Linesfromtxt[grep1("^//",lines-from-txt)]
-identify_data<-Linesfromtxt[!grep1("^//",lines-from-txt)]
+identify_comments<-Linesfromtxt[grep1("^//",line-from-txt)]
+identify_data<-Linesfromtxt[!grep1("^//",line-from-txt)]
 print("comments")
 print(identify_comments)
 
