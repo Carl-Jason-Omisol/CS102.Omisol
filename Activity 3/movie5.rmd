@@ -83,6 +83,7 @@ for (page in 1:pages_to_scrape) {
 ```{r}
 # Create a data frame
 DataFrame <- data.frame(
+  Movie_Title = rep("Mr. Bean's Holiday", reviews_to_scrape),
   Usernames = Usernames[1:300],
   Reviewer_Date = ReviewerDates[1:300],
   Reviewer_Content = ReviewerContents[1:300],

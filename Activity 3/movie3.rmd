@@ -25,7 +25,7 @@ polite::use_manners(save_as = 'polite_scrape.R')
 
 ```{r}
 # Define the URL template
-url_template <- 'https://www.imdb.com/title/tt1877832/reviews/_ajax?ref_=undefined&paginationKey=%s'
+url_template <- 'https://www.imdb.com/title/tt1270798/reviews/_ajax?ref_=undefined&paginationKey=%s'
 ```
 
 ```{r}
@@ -83,6 +83,7 @@ for (page in 1:pages_to_scrape) {
 ```{r}
 # Create a data frame
 DataFrame <- data.frame(
+    Movie_Title = rep("X-Men: First Class", reviews_to_scrape),
   Usernames = Usernames[1:300],
   Reviewer_Date = ReviewerDates[1:300],
   Reviewer_Content = ReviewerContents[1:300],
